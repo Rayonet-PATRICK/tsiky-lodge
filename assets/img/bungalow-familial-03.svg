@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1067" width="1600" height="1067" role="img" aria-label="Bungalow Familial 3">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F1ECE1"/>
+      <stop offset="100%" stop-color="#E2D9C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1067" fill="url(#g)"/>
+  <rect x="0" y="0" width="1600" height="1067" fill="none" stroke="#C1723F" stroke-width="4"/>
+  <text x="50%" y="48%" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="53" fill="#17170F" opacity="0.5">Tsiky Lodge</text>
+  <text x="50%" y="56%" text-anchor="middle" font-family="Arial, sans-serif" font-size="37" fill="#17170F" opacity="0.75">Bungalow Familial 3</text>
+  <text x="50%" y="63%" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" fill="#17170F" opacity="0.4">1600×1067 — bungalow-familial-03.jpg</text>
+</svg>
