@@ -376,13 +376,31 @@ section {
 }
 
 .logo {
-  display: block;
-  width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  width: 195px;
   transition: width var(--dur-base) var(--ease-standard);
 }
 
+.logo-icon {
+  height: 42px;
+  width: auto;
+  flex-shrink: 0;
+  transition: height var(--dur-base) var(--ease-standard);
+}
+
+.logo svg {
+  flex: 1;
+  min-width: 0;
+}
+
 .site-header--solid .logo {
-  width: 128px;
+  width: 170px;
+}
+
+.site-header--solid .logo-icon {
+  height: 36px;
 }
 
 .main-nav {

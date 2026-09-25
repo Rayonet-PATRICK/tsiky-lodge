@@ -52,6 +52,13 @@
     const tabs = Array.from(tabGroup.querySelectorAll(".tab-btn"));
     const panels = Array.from(tabGroup.querySelectorAll(".tab-panel"));
 
+    // Les [data-reveal] d'un panneau masqué (display:none) au chargement ne
+    // peuvent jamais entrer dans le viewport de l'IntersectionObserver : on les
+    // révèle explicitement dès que leur panneau devient actif.
+    function revealPanel(panel) {
+      panel.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
+    }
+
     function activate(index) {
       tabs.forEach((tab, i) => {
         const isActive = i === index;
@@ -59,6 +66,7 @@
         tab.tabIndex = isActive ? 0 : -1;
         panels[i].classList.toggle("is-active", isActive);
       });
+      revealPanel(panels[index]);
       tabs[index].focus();
     }
 
@@ -69,6 +77,7 @@
           t.tabIndex = i === j ? 0 : -1;
           panels[j].classList.toggle("is-active", i === j);
         });
+        revealPanel(panels[i]);
       });
 
       tab.addEventListener("keydown", (e) => {
